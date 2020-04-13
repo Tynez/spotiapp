@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col">
+        <input #term type="text" class="form-control" (keyup)="search(term.value)" placeholder="Buscar artista...">
+    </div>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
+<app-cards *ngIf="!loading" [items]="artists"></app-cards>
